@@ -1,7 +1,8 @@
-import { ReactElement } from 'react'
-import ListingItem, { ListingItemProps } from './ListingItem'
+import { ReactElement } from 'react';
+import ListingItem, { ListingItemProps } from './ListingItem';
 
-export default function Listing({ items = [] }: { items: Array<ListingItemProps & any> }) {
+export default function Listing({ items }: { items: Array<ListingItemProps & any> }) {
+
   const itemList: Array<ReactElement> = [];
   items.forEach(item => itemList.push(<ListingItem item={item} key={item.listing_id} />));
 
@@ -9,5 +10,5 @@ export default function Listing({ items = [] }: { items: Array<ListingItemProps 
     <div className="item-list">
       {itemList}
     </div>
-  )
+  );
 }
