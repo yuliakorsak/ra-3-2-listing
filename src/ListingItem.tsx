@@ -1,9 +1,8 @@
 export interface ListingItemProps {
   listing_id: number;
-  state: string;
   url: string;
   MainImage: {
-    url_570xN: string;
+    url_570xN: string | undefined;
   };
   title: string;
   currency_code: string;
@@ -12,9 +11,6 @@ export interface ListingItemProps {
 }
 
 export default function ListingItem({ item }: { item: ListingItemProps }) {
-  if (item.state !== 'active') {
-    return;
-  }
   const priceTag: string = item.currency_code === 'USD' ? `$${item.price}`
     : item.currency_code === 'EUR' ? `€${item.price}`
       : `${item.price} ${item.currency_code}`;
