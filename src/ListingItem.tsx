@@ -2,7 +2,7 @@ export interface ListingItemProps {
   listing_id: number;
   url: string;
   MainImage: {
-    url_570xN: string | undefined;
+    url_570xN: string;
   };
   title: string;
   currency_code: string;

@@ -13,7 +13,7 @@ data.forEach((item) => {
     validData.push({
       listing_id: item.listing_id,
       url: item.url,
-      MainImage: { url_570xN: item.MainImage?.url_570xN },
+      MainImage: { url_570xN: item.MainImage.url_570xN },
       title: item.title,
       currency_code: item.currency_code,
       price: item.price,
